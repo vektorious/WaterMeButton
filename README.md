@@ -1,4 +1,4 @@
-# WaterMeButton Readme
+# WaterMeButton
 
 <p align="center">
 <img src="https://github.com/vektorious/WaterMeButton/blob/master/img/OPS-logo.png"/>
@@ -13,21 +13,21 @@ All you need is an amazon dash button, a raspberry pi (It actually would work wi
 
 Before you start the software setup you should prepare your amazon dash button first! Activate it as described in the instructions. Depending on if you want to get your money back you paid for the dash button you can order one product with it, reset the button and don't choose a product to order. If you don't want to do that just follow the setup until you have to choose a product and then just close the amazon application and stop the setup at this point. Now you should receive a notification on your phone every time you press the button saying you should finish the setup process of the button. You can either ignore this or block the button from accessing the internet via your router.
 
-Here are the setup instructions for the raspberry pi:
-You will need your Email account data and the mac address of your button. You can detect the mac address by scanning your local network after pressing the button or by monitoring connected devices on your router.
+### Setup
+You will need your Email account data and the mac address of your button. You can detect the mac address by scanning your local network after pressing the button or by monitoring connected devices on your router.  
 !For now it works only with GMAIl!
 
 type this into the shell:
 
-cd /home/pi
-sudo git clone https://github.com/vektorious/WaterMeButton.git  
-cd WaterMeButton  
-sudo chmod +x install.sh  
-sudo ./install.sh
+>cd /home/pi
+>sudo git clone https://github.com/vektorious/WaterMeButton.git  
+>cd WaterMeButton  
+>sudo chmod +x install.sh  
+>sudo ./install.sh
 
 This should install everything. If you should encounter any problems you might have to set it up manually. Here are the example contents of the Email config files:
 
-sudo nano /etc/ssmtp/ssmtp.conf
+open file: sudo nano /etc/ssmtp/ssmtp.conf
 
 root=postmaster  
 mailhub=smtp.gmail.com:587  
