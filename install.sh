@@ -63,17 +63,17 @@ echo "And the subject:" &&
 read subject &&
 echo "writing personal email send script..." &&
 echo "#!/bin/bash" >> send_mail.sh &&
-echo "message=\$1" >> send_mail.sh &
+echo "message=\$1" >> send_mail.sh &&
 echo "{" >> send_mail.sh &&
-echo "\t echo To: $recipient" >> send_mail.sh &&
-echo "\t echo From: $sender" >> send_mail.sh &&
-echo "\t echo Subject: $subject" >> send_mail.sh &&
-echo "\t echo \$message" >> send_mail.sh &&
-echo "\t } | ssmtp $recipient" >> send_mail.sh &&
-sudo chmod +x send_mail.sh
-echo "Let's test if your script works!"
-echo "sendig test email..."
-./send_mail.sh "This ist a test email"
+echo -e "\t echo To: $recipient" >> send_mail.sh &&
+echo -e "\t echo From: $sender" >> send_mail.sh &&
+echo -e "\t echo Subject: $subject" >> send_mail.sh &&
+echo -e "\t echo \$message" >> send_mail.sh &&
+echo -e "\t } | ssmtp $recipient" >> send_mail.sh &&
+sudo chmod +x send_mail.sh &&
+echo "Let's test if your script works!" &&
+echo "sendig test email..." &&
+./send_mail.sh "This ist a test email" &&
 echo "Did it work? Give it some time! (y/n)" &&
 read input &&
   case $input in

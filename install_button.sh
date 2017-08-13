@@ -25,7 +25,7 @@ sudo apt-get install scapy &&
 sudo apt-get install tcpdump &&
 echo "please enter the mac adress of your Dash Button (IMPORTANT: put it in quotes and keep the letters in lowercase like this: 'ac:63:be:03:1a:7c')" &&
 read macadress &&
-sed -i 's/mac_to_action.*/mac_to_action = {'$macadress' : button_pressed_dash1}/' dash_test.py &&
+sed -i 's/mac_to_action =.*/mac_to_action = {'$macadress' : button_pressed_dash1}/' dash_test.py &&
 sudo chmod +x dash_test.py &&
 echo "Let's test it, press the button and see if it recognized! (press strg + c to end testing)" &&
 sudo python dash_test.py &&
@@ -39,7 +39,7 @@ read input
             exit 1;;
   esac
 echo "Setting up final script..." &&
-sed -i 's/mac_to_action.*/mac_to_action = {'$macadress' : button_pressed_dash1}/' WaterMeButton.py &&
+sed -i 's/mac_to_action =.*/mac_to_action = {'$macadress' : button_pressed_dash1}/' WaterMeButton.py &&
 sudo chmod +x WaterMeButton.py &&
 echo "Setup complete! You can start the final script bei typing 'sudo python WaterMeButton.py'" &&
 echo "If you want to run the script in the background type 'sudo nohup python WaterMeButton.py &'" &&

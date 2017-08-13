@@ -19,7 +19,7 @@ You will need your Email account data and the mac address of your button. You ca
 
 type this into the shell:
 
->cd /home/pi
+>cd /home/pi  
 >sudo git clone https://github.com/vektorious/WaterMeButton.git  
 >cd WaterMeButton  
 >sudo chmod +x install.sh  
